@@ -25,20 +25,22 @@ body {
 .cardContainer {
   background-color: white;
   height: min-content;
-  width: 30rem;
+  width: 50rem;
   border-radius: 20px;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
   display: flex;
   position: relative;
   padding: 40px;
+  margin: 100px;
 }
 
 .imageContainer {
   position: absolute;
   top: -4rem;
-  left: 11rem;
-  width: 8rem;
-  height: 8rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 10rem;
+  height: 10rem;
 
   &::before {
     content: "";
@@ -95,7 +97,7 @@ a {
   color: transparent;
   background: linear-gradient(40deg, var(--primeColor) 0%, var(--secondColor) 100%);
   background-clip: text;
-  margin-top: 15px;
+  margin-top: 40px;
   font-family: "Hubot Sans", serif;
 }
 
@@ -183,7 +185,7 @@ a {
   .cardContainer {
     width: 90%;
     max-width: 30rem;
-    margin: 20px;
+    margin: 100px 20px;
     padding: 30px;
   }
 
