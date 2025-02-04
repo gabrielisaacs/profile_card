@@ -23,12 +23,13 @@ body {
 
 .cardContainer {
   background-color: white;
-  height: 20rem;
+  height: 28rem;
   width: 30rem;
   border-radius: 20px;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
   display: flex;
   position: relative;
+  padding: 40px;
 }
 
 .imageContainer {
@@ -37,18 +38,18 @@ body {
   left: 11rem;
   width: 8rem;
   height: 8rem;
-}
 
-.imageContainer::before {
-  content: "";
-  position: absolute;
-  top: 2px;
-  left: -0.25rem;
-  width: calc(100% + 1px);
-  height: 100%;
-  background: linear-gradient(40deg, var(--primeColor) 0%, var(--secondColor) 100%);
-  border-radius: 100%;
-  z-index: 1;
+  &::before {
+    content: "";
+    position: absolute;
+    top: 2px;
+    left: -0.25rem;
+    width: calc(100% + 1px);
+    height: 100%;
+    background: linear-gradient(40deg, var(--primeColor) 0%, var(--secondColor) 100%);
+    border-radius: 100%;
+    z-index: 1;
+  }
 }
 
 #profilePic {
@@ -58,4 +59,100 @@ body {
   position: relative;
   z-index: 2;
   object-fit: cover;
+  box-shadow: 0 4px 30px #a800ca33;
+}
+
+.infoContainer {
+  text-align: center;
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+a {
+  text-decoration: none;
+}
+
+.socialContainer {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  margin: 0 auto;
+}
+
+.socialIcon {
+  width: 1.75rem;
+
+  &:hover {
+    transform: scale(120%);
+    transition: all;
+    transition-duration: 500ms;
+  }
+}
+
+.name {
+  color: transparent;
+  background: linear-gradient(40deg, var(--primeColor) 0%, var(--secondColor) 100%);
+  background-clip: text;
+  margin-top: 15px
+}
+
+.locEtJob {
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  font-size: 0.6rem;
+  gap: 10px;
+  align-items: center;
+  margin: 0 auto;
+  text-transform: uppercase;
+}
+
+.locEtJob span {
+  width: 0.35rem;
+  height: 0.35rem;
+  background-color: black;
+  border-radius: 100%;
+}
+
+.btnContainer {
+  display: flex;
+  flex-direction: row;
+  margin: 0 auto;
+  gap: 10px;
+}
+
+.btnContainer button {
+  padding: 10px 25px;
+  font-size: 1rem;
+  border-radius: 5px;
+  width: 120px;
+  height: 40px;
+  cursor: pointer;
+  transition: transform 256ms ease;
+
+  &:hover {
+    transform: scale(1.05);
+  }
+}
+
+.emailBtn {
+  display: block;
+background: linear-gradient(40deg, var(--primeColor) 0%, var(--secondColor) 100%);
+background-size: 200% 100%;
+background-position: left center;
+background-clip: text;
+color: transparent;
+position: relative;
+border-image-slice: 1 1 1 1;
+border-image-source: linear-gradient(40deg, var(--primeColor) 0%, var(--secondColor) 100%);
+border-radius: 5px;
+
+}
+
+.portfolioBtn {
+  color: white;
+  background: linear-gradient(40deg, var(--primeColor) 0%, var(--secondColor) 100%);
+  border: none;
 }
