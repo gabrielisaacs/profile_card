@@ -12,12 +12,108 @@
       <div class="imageContainer">
         <img
           src="./avatar.jpg"
-          alt="Gabriel Isaac"
+          alt="picture of Gabriel Isaac"
           id="profilePic"
           data-testid="profilePicture"
         />
       </div>
-      <div class="infoContainer"></div>
+      <div class="infoContainer">
+        <h1 class="name" data-testid="fullName">Gabriel Isaac</h1>
+        <div class="locEtJob">
+          <h2 class="jobTitle" data-testid="jobTitle">Frontend Developer</h2>
+          <span></span>
+          <h2 class="location" data-testid="currentLocation">Abuja, NG</h2>
+        </div>
+        <div class="bio" data-testid="shortBio">
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Itaque
+          inventore corporis voluptas laboriosam iure enim vitae? Quos illum
+          animi dolore deleniti qui accusantium, magnam exercitationem odit
+          inventore sit, corporis beatae. Lorem ipsum dolor sit amet consectetur
+          adipisicing elit. Eum, placeat? Optio illum, cupiditate beatae nobis
+          natus exercitationem sit.
+        </div>
+        <div class="socialContainer">
+          <a
+            href="http://"
+            target="_blank"
+            rel="noopener noreferrer"
+            data-testid="socialLinks"
+          >
+            <img
+              src="./socialIcons/Github.svg"
+              alt="github icon"
+              class="socialIcon"
+            />
+          </a>
+          <a
+            href="http://"
+            target="_blank"
+            rel="noopener noreferrer"
+            data-testid="socialLinks"
+          >
+            <img
+              src="./socialIcons/LinkedIn.svg"
+              alt="linkedin icon"
+              class="socialIcon"
+            />
+          </a>
+          <a
+            href="http://"
+            target="_blank"
+            rel="noopener noreferrer"
+            data-testid="socialLinks"
+          >
+            <img
+              src="./socialIcons/Instagram.svg"
+              alt="instagram icon"
+              class="socialIcon"
+            />
+          </a>
+          <a
+            href="http://"
+            target="_blank"
+            rel="noopener noreferrer"
+            data-testid="socialLinks"
+          >
+            <img
+              src="./socialIcons/Twitter.svg"
+              alt="twitter icon"
+              class="socialIcon"
+            />
+          </a>
+        </div>
+        <div class="btnContainer">
+          <a
+            href="https://i.on-fleek.app"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <button class="portfolioBtn">Portfolio</button>
+          </a>
+          <a href="mailto:stewartisaac9@gmail.com" data-testid="emailAddress">
+            <button class="emailBtn">Email</button>
+          </a>
+        </div>
+        <p id="time" data-testid="currentTimeUTC"></p>
+      </div>
     </div>
+
+    <script>
+      function updateTime() {
+        const now = new Date();
+
+        const hours = String(now.getHours()).padStart(2, '0');
+        const minutes = String(now.getMinutes()).padStart(2, '0');
+        const seconds = String(now.getSeconds()).padStart(2, '0');
+
+        const formattedTime = `${hours}:${minutes}:${seconds}`;
+
+        document.getElementById('time').innerHTML = `${formattedTime} UTC+1`;
+      }
+
+      updateTime();
+
+      setInterval(updateTime, 1000);
+    </script>
   </body>
 </html>
